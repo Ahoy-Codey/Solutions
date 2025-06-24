@@ -1,0 +1,54 @@
+
+Document 1 TF-IDF:
+a         : 0.2000
+and       : 0.0000
+are       : 0.0000
+bodies    : 0.0000
+celestial : 0.0000
+is        : 0.2000
+moon      : 0.0000
+satellite : 0.0000
+star      : 0.2811
+sun       : 0.2000
+the       : 0.1425
+
+Document 2 TF-IDF:
+a         : 0.2000
+and       : 0.0000
+are       : 0.0000
+bodies    : 0.0000
+celestial : 0.0000
+is        : 0.2000
+moon      : 0.2000
+satellite : 0.2811
+star      : 0.0000
+sun       : 0.0000
+the       : 0.1425
+
+Document 3 TF-IDF:
+a         : 0.0000
+and       : 0.2008
+are       : 0.2008
+bodies    : 0.2008
+celestial : 0.2008
+is        : 0.0000
+moon      : 0.1429
+satellite : 0.0000
+star      : 0.0000
+sun       : 0.1429
+the       : 0.1018
+
+==== Count Vectorizer (sklearn) ====
+['and' 'are' 'bodies' 'celestial' 'is' 'moon' 'satellite' 'star' 'sun'
+ 'the']
+[[0 0 0 0 1 0 0 1 1 1]
+ [0 0 0 0 1 1 1 0 0 1]
+ [1 1 1 1 0 1 0 0 1 1]]
+['and' 'are' 'bodies' 'celestial' 'is' 'moon' 'satellite' 'star' 'sun'
+ 'the']
+[[0.         0.         0.         0.         0.4804584  0.
+  0.         0.63174505 0.4804584  0.37311881]
+ [0.         0.         0.         0.         0.4804584  0.4804584
+  0.63174505 0.         0.         0.37311881]
+ [0.4261835  0.4261835  0.4261835  0.4261835  0.         0.32412354
+  0.         0.         0.32412354 0.25171084]]
