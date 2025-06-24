@@ -37,8 +37,6 @@ satellite : 0.0000
 star      : 0.0000
 sun       : 0.1429
 the       : 0.1018
-
-==== Count Vectorizer (sklearn) ====
 ['and' 'are' 'bodies' 'celestial' 'is' 'moon' 'satellite' 'star' 'sun'
  'the']
 [[0 0 0 0 1 0 0 1 1 1]

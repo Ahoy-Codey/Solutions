@@ -33,7 +33,6 @@ df = pd.read_csv("Tweets.csv")[['text', 'airline_sentiment']]
 df.dropna(inplace=True)
 df['Tokens'] = df['text'].apply(preprocess)
 
-print("Loading Word2Vec Google News model...")
 w2v_model = api.load("word2vec-google-news-300")
 
 def get_avg_vector(tokens, model, vector_size=100):

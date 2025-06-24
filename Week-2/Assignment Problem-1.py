@@ -21,7 +21,6 @@ df = pd.read_csv('spam.csv', encoding='latin-1')[['v1', 'v2']]
 df.columns = ['Label', 'Message']
 df['Tokens'] = df['Message'].apply(preprocess)
 
-print("Loading Word2Vec model...")
 w2v_model = api.load("word2vec-google-news-300")
 
 def get_avg_vector(tokens, model, size=300):
@@ -29,7 +28,7 @@ def get_avg_vector(tokens, model, size=300):
     return np.mean(vectors, axis=0) if vectors else np.zeros(size)
 
 df['Vector'] = df['Tokens'].apply(lambda x: get_avg_vector(x, w2v_model))
-df = df[df['Vector'].apply(lambda x: np.any(x))]  # Drop rows with all-zero vectors
+df = df[df['Vector'].apply(lambda x: np.any(x))]
 X = np.stack(df['Vector'].values)
 y = df['Label'].map({'ham': 0, 'spam': 1}).values
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
